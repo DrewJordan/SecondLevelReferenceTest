@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FirstLevel;
-
-namespace ConsoleTest
+﻿namespace ConsoleTest
 {
     class Program
     {
         static void Main(string[] args)
         {
             var primary = new FirstLevel.FirstLevel();
-            primary.reference.DoSomething();
+
+            primary.reference.DoSomething(); // will cause compiler error telling you to reference "Second Level"
+
+            primary.DoSomethingWithReferencedClass(); // no compiler error: does the same thing the right way.
         }
     }
 }

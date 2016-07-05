@@ -14,5 +14,10 @@ namespace FirstLevel
         {
             reference = new SecondLevel.SecondLevel();
         }
+
+        public void DoSomethingWithReferencedClass()
+        {
+            reference.DoSomething();
+        }
     }
 }
